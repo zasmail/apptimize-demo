@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   hasNumber: Ember.computed.notEmpty('number'),
   hasName: Ember.computed.notEmpty('name'),
-
+  cardSaved: false,
   phone:   null,
   firstName:    null,
   lastName:    null,

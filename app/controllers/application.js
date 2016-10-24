@@ -22,8 +22,16 @@ export default Ember.Controller.extend({
           company: account.company,
         }
       }).then(function(response){
-      }, function(something){
-      });
+        this.set('cardSaved', true);
+        Ember.run.later(this, function(){
+          this.set('cardSaved', false);
+        }, 5000);
+      }.bind(this), function(something){
+        this.set('cardSaved', true);
+        Ember.run.later(this, function(){
+          this.set('cardSaved', false);
+        }, 5000);
+      }.bind(this));
     },
   }
 });
