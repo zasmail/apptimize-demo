@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
     createAccount: function(account) {
       Ember.$.ajax({
         type: 'GET',
-        url: "https://0f934c86-94ce-44c6-a877-1d0f5d032a71.trayapp.io",
+        url: "https://96f8d662-0bf7-456e-a16b-08e1d7210b08.trayapp.io",
         dataType: 'jsonp',
         data: {
           phone: account.phone,
