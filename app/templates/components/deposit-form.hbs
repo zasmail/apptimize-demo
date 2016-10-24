@@ -1,9 +1,5 @@
 <div class="deposit-form">
   <div class="small-11 small-centered columns">
-    <div class="header-text">
-      <p class="title-text">Sign Up</p>
-      <p class="sub-title">Create a free account</p>
-    </div>
     <!-- {{amount-slider amounts=amounts currentSelection=amount changedSelection='changedSelection'}} -->
 
     <form class="cc-form" {{action 'createAccount' on='submit'}}>
@@ -16,24 +12,45 @@
       {{/liquid-if}}
 
       <div class="row">
-        <div class="small-12 medium-6 columns inline-block">
+        <div class="small-12 columns inline-block">
+          <p class="input-header">Your name:</p>
           {{input value=name placeholder="Name" required=true class="input-field"}}
         </div>
+        <!-- <div class="small-12 medium-6 columns inline-block">
+          {{input value=lastName placeholder="Last Name" required=true class="input-field"}}
+        </div> -->
 
-        <div class="small-12 medium-6 columns inline-block">
-          {{phone-number value=number placeholder="Phone number" required=true class="input-field"}}
-        </div>
-
-        <div class="small-12 medium-6 columns inline-block">
+        <div class="small-12 columns inline-block">
+          <p class="input-header">Email:</p>
           {{input value=email placeholder="Email" required=true class="input-field"}}
         </div>
 
-        <div class="small-12 medium-6 columns inline-block">
-          {{input value=company placeholder="Company" required=true class="input-field"}}
+        <div class="small-12 columns inline-block">
+          <p class="input-header">Password:</p>
+          {{input value=password placeholder="Password" type="password" required=true class="input-field"}}
         </div>
 
+        <div class="small-12 columns inline-block">
+          <p class="input-header">Country:</p>
+          {{input value=country placeholder="Country" required=true class="input-field"}}
+        </div>
+
+        <div class="small-12 columns inline-block">
+          <p class="input-header">Phone: (Optional)</p>
+          {{phone-number value=phone placeholder="Phone number" class="input-field"}}
+        </div>
+
+        <div class="small-12 columns inline-block">
+          <p class="input-header">Company:  (Optional)</p>
+          {{input value=company placeholder="Company" class="input-field"}}
+        </div>
+        <p class="terms">
+          Assigned cloud name: <strong>deyg2miwn</strong> <span class="link">Edit</span> <br><br>
+          <span class="note">By clicking Create Account you agree to Cloudinary's <br>
+          <span class="link">Terms of Service</span> and <span class="link">Privacy Policy</span></span>
+        </p>
       </div>
-      <button type="submit" class="submit-button" disabled={{stripeIsProcessing}}>Save</button>
+      <button type="submit" class="submit-button" disabled={{stripeIsProcessing}}>CREATE ACCOUNT</button>
     </form>
   </div>
 </div>
