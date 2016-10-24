@@ -4,7 +4,7 @@ Ember application for a simple free trial sign-up form.
 
 ## Demo
 
-[See it live here](https://safe-shore-25668.herokuapp.com/)
+[See it live here](https://thawing-shore-14818.herokuapp.com/)
 
 ## How it works
 This is just a sign-up form. It takes information from a user about their new account and sends it to Tray.io. Tray parses the data, adds it to Salesforce and does a few other operations to it.
