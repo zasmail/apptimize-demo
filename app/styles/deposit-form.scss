@@ -1,7 +1,9 @@
 .header-text{
   text-align: center;
-  padding-top: 40px;
-  margin-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: -40px;
+
   .title-text{
     text-transform: uppercase;
     font-weight: bold;
@@ -13,19 +15,23 @@
   }
 }
 .deposit-form{
-  font-family: 'Roboto',Arial,Helvetica,sans-serif;
-  font-size: 14pt;
+  font-family: "Open Sans";
+  font-size: 16px;
   background: rgb(255, 255, 255);
   color: #2e2e2e;
   margin-top: 50px;
-  border-radius: 3px;
   padding-top: 32px;
+  padding-bottom: 32px;
+  border: 1px solid rgb(213, 213, 213);
+  border-bottom: solid thick #266DD1;
   .submit-button{
-    background: #f16e21;
+    background: #266DD1;
     width: 100%;
-    height: 50px;
-    border-radius: 3px;
-    font-size: 14pt;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    color: white;
+    text-align: center;
     &:hover{
       cursor: pointer;
       background: #47862D;
@@ -38,15 +44,13 @@
     height: 40px;
     padding-left: 10px;
     margin-bottom: 20px;
-    border-radius: 3px;
     .text-alert{
       line-height: 40px;
     }
   }
   .input-field{
-    height: 50px;
-    border-radius: 3px;
-    font-size: 14pt;
+    height: 36px;
+    font-size: 13px;
     font-weight: normal;
     // &:focus{
     //   background: $form-color;
@@ -66,14 +70,22 @@
     margin: 0 0 22px;
   }
   .input-header{
-    margin-bottom: 0px;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8D97A1;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .conditions{
+    font-size: 12px;
+    color: #272c32;
   }
   .terms{
     text-align: center;
   }
   .link{
     color: #0971ce;
-    text-decoration: underline;
     &:hover{
       cursor: pointer;
     }
@@ -88,7 +100,6 @@
     }
     .slider-value{
       color: $text-white;
-      border-radius: 3px;
       background: $form-color;
       height: 50px;
       line-height: 50px;
@@ -119,4 +130,18 @@
 
 th{
   padding: 10px;
+}
+
+.sign-up-logo img {
+    -webkit-filter: invert(1);
+    height: 45px;
+}
+
+.header-logo{
+  height: 45px;
+  -webkit-filter: invert(1);
+}
+
+.float-left{
+  float: left !important;
 }

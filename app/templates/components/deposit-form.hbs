@@ -12,45 +12,47 @@
       {{/liquid-if}}
 
       <div class="row">
-        <div class="small-12 columns inline-block">
-          <p class="input-header">Your name:</p>
-          {{input value=name placeholder="Name" required=true class="input-field"}}
+        <div class="small-6 columns inline-block">
+          <p class="input-header">FIRST NAME</p>
+          {{input value=firstName required=true class="input-field"}}
+        </div>
+        <div class="small-6 columns inline-block">
+          <p class="input-header">LAST NAME</p>
+          {{input value=lastName required=true class="input-field"}}
         </div>
         <!-- <div class="small-12 medium-6 columns inline-block">
           {{input value=lastName placeholder="Last Name" required=true class="input-field"}}
         </div> -->
 
         <div class="small-12 columns inline-block">
-          <p class="input-header">Email:</p>
-          {{input value=email placeholder="Email" required=true class="input-field"}}
+          <p class="input-header">WORK EMAIL ADDRESS</p>
+          {{input value=email required=true class="input-field"}}
         </div>
 
         <div class="small-12 columns inline-block">
-          <p class="input-header">Password:</p>
-          {{input value=password placeholder="Password" type="password" required=true class="input-field"}}
+          <p class="input-header">COMANY NAME</p>
+          {{input value=company class="input-field"}}
         </div>
 
         <div class="small-12 columns inline-block">
-          <p class="input-header">Country:</p>
-          {{input value=country placeholder="Country" required=true class="input-field"}}
+          <p class="input-header">PHONE NUMBER</p>
+          {{phone-number value=phone type="tel" class="input-field"}}
         </div>
 
         <div class="small-12 columns inline-block">
-          <p class="input-header">Phone: (Optional)</p>
-          {{phone-number value=phone placeholder="Phone number" class="input-field"}}
+          <p class="input-header">PASSWORD</p>
+          {{input value=password type="password" class="input-field"}}
         </div>
-
         <div class="small-12 columns inline-block">
-          <p class="input-header">Company:  (Optional)</p>
-          {{input value=company placeholder="Company" class="input-field"}}
+          {{input checked=checkbox type="checkbox" required=true}}
+          <span class="conditions"> I have read and agree to the <span class="link">Terms and Conditions.</span></span>
         </div>
-        <p class="terms">
-          Assigned cloud name: <strong>deyg2miwn</strong> <span class="link">Edit</span> <br><br>
-          <span class="note">By clicking Create Account you agree to Cloudinary's <br>
-          <span class="link">Terms of Service</span> and <span class="link">Privacy Policy</span></span>
-        </p>
+        <div class="small-4 columns float-left">
+          <div type="submit" class="submit-button" disabled={{stripeIsProcessing}}>Register</div>
+        </div>
       </div>
-      <button type="submit" class="submit-button" disabled={{stripeIsProcessing}}>CREATE ACCOUNT</button>
+
+
     </form>
   </div>
 </div>
